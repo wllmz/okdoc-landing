@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link href="index.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Nexa:wght@400;700&display=swap" rel="stylesheet">
+
+
+  <title>Hello, world!</title>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4">
+        <!-- Remplacez 'path_to_your_image.jpg' avec le chemin de votre image -->
+        <img src="./assets/medecin-header.png" alt="Docteur" class="img-fluid">
+      </div>
+      <div class="col-md-5">
+        <img src="./assets/logo.png" alt="Docteur" class="img-fluid">
+        <h1>L'application qui met en relation des professionnels de santé pour se pencher sur des cas complexes.</h1>
+        <p id="intro">Notre application permet au patient un nouveau parcours de soin digitalisé avec un duo de médecins
+          généralistes et spécialistes pour le diagnostic d'une pathologie non commune ou plus rare.</p>
+        <p id="intro">Les digitalisations du parcours de soin améliorent la qualité du suivi. Chaque étape différente
+          est l'occasion pour le patient de faciliter sa prise en charge sur le long terme et l'échange entre les divers
+          professionnels de santé.</p>
+        <!-- Ajoutez ici d'autres éléments comme des boutons ou des formulaires si nécessaire -->
+      </div>
+    </div>
+  </div>
+
+
+
+  <br> <br>
+  <div id="monCarrousel" class="carousel slide" data-ride="carousel">
+    <div class="container-fluid text-center">
+      <div class="tab-container">
+        <a data-target="#monCarrousel" data-slide-to="0" class="active">
+          <div class="tab" onclick="makeActive(event, 'patients')">NOS PATIENTS</div>
+        </a>
+        <a data-target="#monCarrousel" data-slide-to="1">
+          <div class="tab" onclick="makeActive(event, 'pros')">NOS PROFESSIONNELS</div>
+        </a>
+      </div>
+    </div>
+
+    <!-- Wrapper pour les slides -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="container-fluid text-center" id="test">
+          <div class="card" id="patient">
+            <h2 class="text-center mb-4" id="patient">LES AVANTAGES POUR NOS PATIENTS</h2>
+            <div class="row">
+              <div class="col-md-4 mb-3">
+
+                <img src="./assets/medecin-1.png" id="medecin" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title" id="patient">Un suivi approfondi et personnalisé sur votre problématique
+                    médicale.</h5>
+                  <p class="card-text" id="patient">Deux professionnels de santé qui se penche sur vos antécédents
+                    médicaux, et tentent de vous proposer de nouvelles perspectives de recherches.</p>
+                </div>
+
+              </div>
+              <div class="col-md-4 mb-3">
+
+                <img src="./assets/medecin-2.png" id="medecin" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title" id="patient">Un dossier dématérialisée qui permet la facilité des échanges
+                    entre professionnels.</h5>
+                  <p class="card-text" id="patient">Votre dossier médical sera disponible en temps réel et à la
+                    disposition de vos médecins référents. Cette vue d’ensemble sur votre dossier, va permettre aux
+                    professionnels de santé de pouvoir collaborer efficacement.</p>
+                </div>
+
+              </div>
+              <div class="col-md-4 mb-3">
+
+                <img src="./assets/medecin-3.png" id="medecin" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title" id="patient">Une proximité avec des spécialistes proches de chez vous.</h5>
+                  <p class="card-text" id="patient">Des professionnels de santé au plus proche de chez vous, que ce soit
+                    des spécialistes de votre ville ou de grandes villes aux alentours.</p>
+                </div>
+
+              </div>
+            </div>
+            <div class="row">
+              <div class="col text-center mt-4">
+                <button type="button" data-toggle="modal" class="button-custom" data-target="#exampleModal2">JE
+                  M'INSCRIS</bouton>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Inscrivez-vous</h5> 
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form action="https://formspree.io/f/xvojeaaq" method="POST">
+                  <div class="form-control">
+                    <input type="text" id="nom" name="nom" required placeholder="nom">
+                  </div>
+                  <div class="form-control">
+                    <input type="text" id="prenom" name="prenom" required placeholder="prenom">
+                  </div>
+                  <div class="form-control">
+                    <input type="text" id="profession" name="profession" required placeholder="profession">
+                  </div>
+                  <div class="form-control">
+                    <input type="email" id="email" name="email" required placeholder="email">
+                  </div>
+                  <input type="submit" value="ENVOYER" class="btn">
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="carousel-item">
+        <div class="container-fluid text-center" id="test">
+          <div class="card" id="medecin">
+            <h2 class="text-center mb-4" id="medecin">LES AVANTAGES POUR NOS PROFESSIONNELS DE SANTÉ</h2>
+            <div class="row">
+              <div class="col-md-4 mb-3">
+
+                <img src="./assets/medecin-1.png" id="medecin" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title" id="medecin">Un accès privilégié à des contacts, spécialistes de certaines
+                    pathologies. </h5>
+                  <p class="card-text" id="medecin">Trouvez des confrères qui ont travaillé sur les mêmes cas, et
+                    échangez afin de trouver des réponses pour vos patients. Partagez votre savoir sur des pathologies
+                    particulières dont vous êtes expert, auprès de vos confrères.</p>
+                </div>
+              </div>
+              <div class="col-md-4 mb-3">
+                <img src="./assets/medecin-3.png" id="medecin" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title" id="medecin">Travailler sur des cas concrets qui vont faire avancer les
+                    recherches sur certaines pathologies cardiologiques.</h5>
+                  <p class="card-text" id="medecin">Se pencher sur des cas rares et/ou compliqués et réunir son savoir
+                    avec ses confrères afin de tenter de donner un diagnostic à votre patient, mais également apporter
+                    du savoir et trouver des solutions pour cette pathologie.</p>
+                </div>
+              </div>
+              <div class="col-md-4 mb-3">
+                <img src="./assets/medecin-2.png" id="medecin" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title" id="medecin">Un binôme fiable avec qui travailler main dans la main.</h5>
+                  <p class="card-text" id="medecin">Généraliste ou spécialiste, trouvez votre binôme, et travaillez main
+                    dans la main pour tenter de trouver des réponses aux patients qui en manquent.</p>
+                </div>
+
+              </div>
+              <div class="col text-center mt-4">
+                <button type="button" data-toggle="modal" class="button-custom2" data-target="#exampleModal">JE
+                  M'INSCRIS</bouton>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <br> <br>
+
+  <div class="container-fluid" id="test">
+    <div class="row justify-content-center">
+      <div class="col-md-12">
+        <div class="contact-section text-center">
+          <p>Si vous souhaitez nous contacter, écrivez-nous !</p>
+          <a href="mailto:contact.okdoc@gmail.com" class="contact-email">contact.okdoc@gmail.com</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Inscrivez-vous</h5> 
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form action="https://formspree.io/f/xwkdgoon" method="POST">
+            <div class="form-control">
+              <input type="text" id="nom" name="nom" required placeholder="nom">
+            </div>
+            <div class="form-control">
+              <input type="text" id="prenom" name="prenom" required placeholder="prenom">
+            </div>
+            <div class="form-control">
+              <input type="text" id="profession" name="profession" required placeholder="profession">
+            </div>
+            <div class="form-control">
+              <input type="email" id="email" name="email" required placeholder="email">
+            </div>
+            <input type="submit" value="ENVOYER" class="btn">
+            </form>
+          </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+  <script>
+    // JavaScript function to add 'active' class to the clicked tab
+    function makeActive(e, tabId) {
+      // Remove 'active' class from all tabs
+      var tabs = document.getElementsByClassName('tab');
+      for (var i = 0; i < tabs.length; i++) {
+        tabs[i].classList.remove('active');
+      }
+
+      // Add 'active' class to the clicked tab
+      e.target.classList.add('active');
+    }
+  </script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
